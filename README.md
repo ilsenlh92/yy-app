@@ -1,1 +1,1 @@
-# yy
+# yy-laravel-app
