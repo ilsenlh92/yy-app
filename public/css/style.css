@@ -553,6 +553,11 @@ p {
 /*===== NAVBAR =====*/
 #logo-text{
     display: none;
+    font-family: "Poppins", sans-serif;
+    color: #fb8f0c;
+    margin-left:20px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 .navbar-area {
   position: absolute;
@@ -569,7 +574,7 @@ p {
 .sticky {
   position: fixed;
   z-index: 99;
-  background-color: #000000e7;
+  background-color: #000000ed;
   -webkit-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
@@ -795,7 +800,7 @@ p {
   height: 800px; }
   @media only screen and (min-width: 1400px) {
     .header-hero {
-      height: 900px; } }
+      height: 100vh; } }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .header-hero {
       height: auto; } }
@@ -908,8 +913,6 @@ p {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
 }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .header-shape-2 img {
@@ -1060,9 +1063,75 @@ p {
     transform: translate(-50%, -50%);
     color: #fff;
 }
+/*===========================
+      03.ELEMENTS css
+===========================*/
+.elements-area{
+background-color: #212529;
+    .col-lg-4{
+        visibility: visible;
+        animation-duration: 1.3s;
+        animation-delay: 0.5s;
+        animation-name: fadeInUpBig;
+    }
+}
+.elements-widget-container {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: background .3s,
+    border .3s,border-radius .3s,
+    box-shadow .3s,
+    transform var(--e-transform-transition-duration,.4s);
+}
+.elements-icon-box-icon {
+    margin-right: var(--icon-box-icon-margin,15px);
+    margin-left: 0;
+    margin-bottom: unset;
+    display: inline-block;
+    line-height: 1;
+    transition: all .3s;
+    color: #ffa203;
+    font-size: 50px;
+    text-align: center;
+}
+.elements-icon-box-content {
+    flex-grow: 1;
+}
+/*===========================
+      03.CARDS css
+===========================*/
+
+.card-img {
+    transition: transform .2s;
+    position: relative;
+}
+.card-img::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.card-img:hover {
+    transform: scale(2.1);
+}
+.card-img-overlay{
+    background: rgba(0, 0, 0, 0.61);
+}
+.card-img-container {
+    overflow: hidden; /* Asegura que la imagen no se salga de la tarjeta */
+}
+
+.card-img-transition {
+    transition: transform 10s; /* Efecto suave de cambio de tamaño */
+}
 
 /*===========================
-      03.SERVICES css
+      04.SERVICES css
 ===========================*/
 .single-services {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(154, 154, 154, 0.16);
@@ -1121,21 +1190,21 @@ p {
     .single-services .services-content .text {
       margin-top: 30px; }
   .single-services.services-color-1 .services-icon {
-    background-color: #00b7ee;
+    background-color: #c36e08;
     }
     .single-services.services-color-1 .services-icon::before {
-      background-color: rgba(0, 187, 255, 0.2); }
+      background-color: rgba(255, 208, 0, 0.2); }
   .single-services.services-color-1 .services-content .services-title a:hover {
     color: #E7A019; }
   .single-services.services-color-2 .services-icon {
-    background-color: #1c5dba;
+    background-color: #c36e08;
     }
     .single-services.services-color-2 .services-icon::before {
-      background-color: rgba(14, 155, 255, 0.2); }
+      background-color: rgba(255, 231, 14, 0.2); }
   .single-services.services-color-2 .services-content .services-title a:hover {
     color: #E54F4F; }
   .single-services.services-color-3 .services-icon {
-    background-color: #00b7ee;
+    background-color: #c36e08;
     }
     .single-services.services-color-3 .services-icon::before {
       background-color: rgba(137, 80, 228, 0.2); }
@@ -1156,7 +1225,7 @@ p {
     }
 
 /*===========================
-       04.ABOUT css
+       05.ABOUT css
 ===========================*/
 #about {
     @media (max-width: 767px) {
@@ -1240,7 +1309,7 @@ p {
 
 
 /*===========================
-     10.CONTACT css
+     6.CONTACT css
 ===========================*/
 .contact-area .contact-image {
   padding-top: 65px;
@@ -1342,7 +1411,7 @@ p {
           box-shadow: 0px 4px 25px 0px rgba(82, 90, 99, 0.4); }
 
 /*===========================
-     10.FOOTER css
+     7.FOOTER css
 ===========================*/
 .footer-area {
   position: relative;
@@ -1578,3 +1647,6 @@ p {
   .back-to-top:hover {
     background-color: rgba(231, 216, 8, 0.5);
     color: #fff; }
+    .back-to-top-show{
+        display: block;
+    }

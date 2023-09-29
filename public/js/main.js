@@ -16,8 +16,10 @@ $(function () {
         var scroll = $(window).scrollTop();
         if (scroll < 20) {
             $(".navbar-area").removeClass("sticky");
+            $(".back-to-top").removeClass("back-to-top-show");
         } else {
             $(".navbar-area").addClass("sticky");
+            $(".back-to-top").addClass("back-to-top-show");
         }
     });
 
@@ -116,9 +118,5 @@ $(function () {
     //=====  WOW active
 
     new WOW().init();
-
-
-
-
 
 });

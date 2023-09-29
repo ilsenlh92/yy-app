@@ -8,7 +8,6 @@
 
     <title>Y&Y Window Service Corp</title>
 
-
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
@@ -72,37 +71,47 @@
         @endif
     @endif
 
-    <!--====== HEADER PART START ======-->
-
-    @include('includes.header')
-
-    <!--====== HEADER PART ENDS ======-->
-
-   {{--  <!--====== SERVICES PART START ======-->
-
-    @include('includes.services')
-
-    <!--====== SERVICES PART ENDS ======-->
-
-    <!--====== ABOUT PART START ======-->
-
-    @include('includes.about')
-
-    <!--====== ABOUT PART ENDS ======-->
-
-    <!--====== PRICING PART START ======-->
-
-    @include('includes.prices')
-
-    <!--====== PRICING PART ENDS ======-->
-
-
-    <!--====== CONTACT PART START ======-->
-
-    @include('includes.contact')
-
-    <!--====== CONTACT PART ENDS ======--> --}}
-
+    @section('navbar')
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="/">
+                                <img src="images/logo.png" alt="Y&&">
+                                <title id="logo-text"> Window Service Corp </title>
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#home">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#why">Why</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#pricing">Pricing</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#contact">Contact</a>
+                                    </li>
+                                    <li class="nav-item"><a  href="https://wa.me/+1305989611" ><span class="badge rounded-pill bg-warning" style="color: #201f1e;padding: 7px 15px;"> <i class="lni lni-whatsapp" style="margin: 0 4px;"></i>+1 (305) 989 - 6611</span></li></a>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navbar area -->
+    @show
+    <!--====== CONTENT START ======-->
+    @yield('content')
+    <!--====== CONTENT START ======-->
     <!--====== PART START ======-->
     <img class="svg" src="images/footer-shape-1.svg" alt="shape">
     <footer id="footer" class="footer-area">
@@ -137,14 +146,14 @@
                                 <li>
                                     <div class="contact-info d-flex">
                                         <div class="info-content media-body">
-                                            <p class="text"><i class="lni lni-phone"></i> +1 (772) 410 - 9506</p>
+                                            <p class="text"><i class="lni lni-phone"></i> +1 (305) 989 - 6611</p>
                                         </div>
                                     </div> <!-- contact info -->
                                 </li>
                                 <li>
                                     <div class="contact-info d-flex">
                                         <div class="info-content media-body">
-                                            <p class="text"><a href="http://easymovingcleaning.us"><i class="lni lni-world"></i> easymovingcleaning.us</a></p>
+                                            <p class="text"><a href="http://easymovingcleaning.us"><i class="lni lni-world"></i> windowsservicecorp.us</a></p>
                                         </div>
                                     </div> <!-- contact info -->
                                 </li>
@@ -165,8 +174,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="copyright d-sm-flex justify-content-between">
+                        <div class="copyright justify-content-between">
                             <div class="copyright-text text-center">
+                                <p class="text">©2023, Y&Y Window Services Corp. All Rights reserved</p>
                                 <p class="text" style="font-size: xx-small;">Template Crafted by <a rel="nofollow" href="https://uideck.com">UIdeck</a></p>
                             </div> <!-- copyright text -->
                         </div> <!-- copyright -->
@@ -226,6 +236,7 @@
             setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
         });
     </script>
+
 
 </body>
 

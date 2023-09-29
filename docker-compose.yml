@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  yyapp:
+    image: yyapp
+    build:
+      context: .
+      dockerfile: ./Dockerfile
