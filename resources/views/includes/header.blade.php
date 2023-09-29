@@ -11,7 +11,7 @@
                 <div class="header-overlay"></div>
                 <div class="header-content">
                     <h1>Windows Service Corp</h1>
-                    <p>Disfruta explorando</p>
+                    <p>We manufacture and customize your Food Truck</p>
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->

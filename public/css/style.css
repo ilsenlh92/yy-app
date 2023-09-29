@@ -663,7 +663,7 @@ p {
     box-shadow: 0px 15px 20px 0px rgba(56, 66, 77, 0.1);
     padding: 5px 12px; }
     .header-content{
-        display: none;
+        /* display: none; */
     }
 }
 
@@ -806,7 +806,7 @@ p {
       height: auto; } }
   @media (max-width: 767px) {
     .header-hero {
-      height: auto; } }
+      height: 100svh; } }
   .header-hero .shape {
     position: absolute; }
     .header-hero .shape.shape-1 {
@@ -1129,7 +1129,6 @@ background-color: #212529;
 .card-img-transition {
     transition: transform 10s; /* Efecto suave de cambio de tamaño */
 }
-
 /*===========================
       04.SERVICES css
 ===========================*/
