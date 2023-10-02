@@ -90,7 +90,7 @@
                             </button>
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto nav justify-content-end">
-                                    <li class="nav-item active">
+                                    <li class="nav-item {{request() -> routeIs('home') ? 'active' : ''}} ">
                                         <a class="page-scroll" href="{{ route ('home')}}#home">Home</a>
                                     </li>
                                     <li class="nav-item">
@@ -102,14 +102,14 @@
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#footertop">Contact</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item {{request() -> routeIs('trailers') ? 'active' : ''}}">
                                         <a class="page-scroll" href="{{ route('trailers')}}">Trailers</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item {{request() -> routeIs('foodtrucks') ? 'active' : ''}}">
                                         <a class="page-scroll" href="{{ route('foodtrucks')}}">Foodtrucks</a>
                                     </li>
-                                    <li class="nav-item about-us">
-                                        <a class="page-scroll" href="{{ route('about-us')}}">About Us</a>
+                                    <li class="nav-item {{request() -> routeIs('about-us') ? 'active' : ''}}">
+                                        <a class="page-scroll " href="{{ route('about-us')}}">About Us</a>
                                     </li>
                                     <li class="nav-item">
                                         <a  id="wa" href="https://wa.me/+1305989611" >
@@ -128,16 +128,18 @@
         </div> <!-- navbar area -->
     @show
     <!--====== CONTENT START ======-->
-    @yield('content')
+    <div id='content'>
+        @yield('content')
+    </div>
     <!--====== CONTENT START ======-->
     <!--====== PART START ======-->
     <img id="footertop" class="svg mb-n1" src="images/footer-shape-1.svg" alt="shape">
     <footer id="footer" class="footer-area">
-        <div class="footer-widget pt-30 pb-120">
+        <div class="footer-widget pt-90 pb-120">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
-                        <div class="footer-about mt-50 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div class="footer-about mt-50 wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.8s">
                             <a class="logo" href="#">
                                 <img src="images/logo.png" alt="Logo Y&Y Window Service Corp">
                             </a>
@@ -156,7 +158,7 @@
                         </div> <!-- footer link -->
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="footer-contact mt-45 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                        <div class="footer-contact mt-45 wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.8s">
                             <div class="footer-title">
                                 <h4 class="title">Contact with Us</h4>
                             </div>
@@ -192,7 +194,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="copyright justify-content-between">
+                        <div class="copyright justify-content-between pb-20 pt-20">
                             <div class="copyright-text text-center">
                                 <p class="text">©2023, <a href="#">Y&Y Window Services Corp.</a> All Rights reserved</p>
                                 <p class="text" style="font-size: xx-small;">Template Crafted by <a rel="nofollow" href="https://uideck.com">UIdeck</a></p>

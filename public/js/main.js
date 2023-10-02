@@ -34,7 +34,7 @@ $(function () {
 
         scrollLink.each(function () {
 
-            var sectionOffset = $(this.hash).offset().top - 73;
+            var sectionOffset = $(this.hash).offset().top - 100;
 
             if (sectionOffset <= scrollbarLocation) {
                 $(this).parent().addClass('active');
@@ -42,6 +42,8 @@ $(function () {
             }
         });
     });
+
+
 
 
     //===== close navbar-collapse when a  clicked
