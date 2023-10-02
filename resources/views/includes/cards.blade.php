@@ -1,5 +1,13 @@
-<section id="cards" class="pt-70 pb-120">
+<section id="cards" class="pt-70 pb-70">
     <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="section-title text-center pb-25">
+                    <h3 class="title">Why You Should Choose <span style="text-transform: uppercase; color: #e6905c;">windows service corp</span></h3>
+                    <p class="text">Cleaning and moving services are very important to make sure everything is in order and clean before you move.</p>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
         <div class="row align-items-center">
             <div class="col-lg-4 p-4">
                 <div class="card bg-dark text-white card-img-container">
@@ -44,22 +52,29 @@
     for (var i = 0; i < imgElements.length; i++) {
         imgElements[i].images = imgElements[i].getAttribute('data-images').split(',');
         imgElements[i].currentIndex = 0;
+        imgElements[i].style.transition = '0.25s ease-in-out, transform 1s ease-in-out'; // Añade transición suave
     }
 
-    setInterval(function() {
-        for (var i = 0; i < imgElements.length; i++) {
-            imgElements[i].style.transform = "scale(1.1)"; // Efecto de agrandar
-        }
+   // Primera tarjeta cambia cada 4 segundos
+setInterval(changeImage, 4000, imgElements[0]);
 
-        setTimeout(function() {
-            for (var i = 0; i < imgElements.length; i++) {
-                imgElements[i].currentIndex = (parseInt(imgElements[i].currentIndex) + 1) % imgElements[i].images.length; // Cambiar a la siguiente imagen
-                imgElements[i].src = imgElements[i].images[imgElements[i].currentIndex];
+// Segunda tarjeta cambia cada 5 segundos
+setInterval(changeImage, 5000, imgElements[1]);
 
-                imgElements[i].onload = function() {
-                    this.style.transform = "scale(2.5)"; // Efecto de encoger
-                };
-            }
-        }, 2000);
-    }, 4000); // Cambiar la imagen cada 4 segundos
+// Tercera tarjeta cambia cada 6 segundos
+setInterval(changeImage, 6000, imgElements[2]);
+
+function changeImage(imgElement) {
+    imgElement.style.transform = "scale(1.1)"; // Efecto de agrandar
+
+    setTimeout(function() {
+        imgElement.currentIndex = (parseInt(imgElement.currentIndex) + 1) % imgElement.images.length; // Cambiar a la siguiente imagen
+        var newImage = new Image();
+        newImage.src = imgElement.images[imgElement.currentIndex];
+        newImage.onload = function() {
+            imgElement.src = this.src;
+            imgElement.style.transform = "scale(1)"; // Efecto de encoger
+        };
+    }, 1000); // Espera 1 segundo para cambiar la imagen
+}
 </script>

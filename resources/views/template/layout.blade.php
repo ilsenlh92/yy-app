@@ -8,6 +8,7 @@
 
     <title>Y&Y Window Service Corp</title>
 
+    @section('styles')
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
@@ -35,6 +36,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    @show
 
 </head>
 
@@ -78,7 +80,7 @@
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="/">
-                                <img src="images/logo.png" alt="Y&&">
+                                <img src="images/logo.png" alt="Y&Y">
                                 <title id="logo-text"> Window Service Corp </title>
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -87,20 +89,36 @@
                                 <span class="toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul id="nav" class="navbar-nav ml-auto">
+                                <ul id="nav" class="navbar-nav ml-auto nav justify-content-end">
                                     <li class="nav-item active">
-                                        <a class="page-scroll" href="#home">Home</a>
+                                        <a class="page-scroll" href="{{ route ('home')}}#home">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#why">Why</a>
+                                        <a class="page-scroll" href="{{ route ('home')}}#why">Why</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#pricing">Pricing</a>
+                                        <a class="page-scroll" href="{{ route ('home')}}#cards">Cards</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#contact">Contact</a>
+                                        <a class="page-scroll" href="#footertop">Contact</a>
                                     </li>
-                                    <li class="nav-item"><a  href="https://wa.me/+1305989611" ><span class="badge rounded-pill bg-warning" style="color: #201f1e;padding: 7px 15px;"> <i class="lni lni-whatsapp" style="margin: 0 4px;"></i>+1 (305) 989 - 6611</span></li></a>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="{{ route('trailers')}}">Trailers</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="{{ route('foodtrucks')}}">Foodtrucks</a>
+                                    </li>
+                                    <li class="nav-item about-us">
+                                        <a class="page-scroll" href="{{ route('about-us')}}">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a  id="wa" href="https://wa.me/+1305989611" >
+                                            <span class="badge rounded-pill bg-warning" style="color: #201f1e;padding: 7px 15px;">
+                                                <i class="lni lni-whatsapp" style="margin: 0 4px;"></i>
+                                                <span id="wanum" style="display: none">+1 (305) 989 - 6611</span>
+                                            </span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
                         </nav> <!-- navbar -->
@@ -113,9 +131,9 @@
     @yield('content')
     <!--====== CONTENT START ======-->
     <!--====== PART START ======-->
-    <img class="svg" src="images/footer-shape-1.svg" alt="shape">
+    <img id="footertop" class="svg mb-n1" src="images/footer-shape-1.svg" alt="shape">
     <footer id="footer" class="footer-area">
-        <div class="footer-widget pt-30 pb-80">
+        <div class="footer-widget pt-30 pb-120">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
@@ -140,7 +158,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-contact mt-45 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.8s">
                             <div class="footer-title">
-                                <h4 class="title">Quick Link</h4>
+                                <h4 class="title">Contact with Us</h4>
                             </div>
                             <ul class="contact-list">
                                 <li>
@@ -153,7 +171,7 @@
                                 <li>
                                     <div class="contact-info d-flex">
                                         <div class="info-content media-body">
-                                            <p class="text"><a href="http://easymovingcleaning.us"><i class="lni lni-world"></i> windowsservicecorp.us</a></p>
+                                            <p class="text"><a href="http://windowsservicecorp.us"><i class="lni lni-world"></i> windowsservicecorp.us</a></p>
                                         </div>
                                     </div> <!-- contact info -->
                                 </li>
@@ -176,7 +194,7 @@
                     <div class="col-lg-12">
                         <div class="copyright justify-content-between">
                             <div class="copyright-text text-center">
-                                <p class="text">©2023, Y&Y Window Services Corp. All Rights reserved</p>
+                                <p class="text">©2023, <a href="#">Y&Y Window Services Corp.</a> All Rights reserved</p>
                                 <p class="text" style="font-size: xx-small;">Template Crafted by <a rel="nofollow" href="https://uideck.com">UIdeck</a></p>
                             </div> <!-- copyright text -->
                         </div> <!-- copyright -->
@@ -207,7 +225,7 @@
 -->
 
     <!--====== PART ENDS ======-->
-
+    @section('scripts')
     <!--====== Jquery js ======-->
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/vendor/modernizr-3.7.1.min.js"></script>
@@ -235,8 +253,17 @@
             // After 3 seconds, remove the show class from DIV
             setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
         });
-    </script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('wa').addEventListener('mouseover', function() {
+                document.getElementById('wanum').style.display = 'inline';
+            });
 
+            document.getElementById('wa').addEventListener('mouseout', function() {
+                document.getElementById('wanum').style.display = 'none';
+            });
+        });
+    </script>
+    @show
 
 </body>
 
