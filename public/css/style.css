@@ -109,6 +109,7 @@ p {
   line-height: 24px;
   color: #fff;
   margin: 0px;
+  margin-bottom: 10px;
   }
 .poor{
     font-family: 'Poor';
@@ -811,9 +812,9 @@ p {
         height: 50vh!important;
     }
 }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
+/*   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .header-hero {
-      height: auto; } }
+      height: auto; } } */
   @media (max-width: 767px) {
     .header-hero {
       height: 100svh; }
@@ -1219,14 +1220,14 @@ background-color: #212529;
     .single-services.services-color-1 .services-icon::before {
       background-color: rgba(255, 208, 0, 0.2); }
   .single-services.services-color-1 .services-content .services-title a:hover {
-    color: #E7A019; }
+    color: white; }
   .single-services.services-color-2 .services-icon {
     background-color: #c36e08;
     }
     .single-services.services-color-2 .services-icon::before {
       background-color: rgba(255, 231, 14, 0.2); }
   .single-services.services-color-2 .services-content .services-title a:hover {
-    color: #E54F4F; }
+    color: white; }
   .single-services.services-color-3 .services-icon {
     background-color: #c36e08;
     }
@@ -1240,7 +1241,7 @@ background-color: #212529;
     .single-services.services-color-4 .services-icon::before {
       background-color: rgba(8, 152, 231, 0.2); }
   .single-services.services-color-4 .services-content .services-title a:hover {
-    color: #fb8f0c; }
+    color: white; }
   .single-services:hover {
     background-color: #fb8f0c;
     -webkit-box-shadow: 0px 15px 17px 0px rgba(154, 154, 154, 0.16);
@@ -1329,6 +1330,10 @@ background-color: #212529;
 
 .about-content .main-btn {
   margin-top: 40px; }
+
+.widget-wrap.border:hover{
+    background-color: #000000;
+}
 /*===========================
      6.GAlERY css
 ===========================*/
@@ -1337,6 +1342,16 @@ background-color: #212529;
     color: #ffffff;
     min-height: 100vh;
     padding: 30px 50px;
+}
+.img-responsive {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.img-responsive-dwidth {
+    aspect-ratio: 2/1;
 }
 
 .gallery-container h1 {

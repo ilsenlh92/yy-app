@@ -80,7 +80,7 @@
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="/">
-                                <img src="images/logo.png" alt="Y&Y">
+                                <img src="images/logo.png" alt="Logo Y&Y Window Service Corp">
                                 <title id="logo-text"> Window Service Corp </title>
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,29 +93,31 @@
                                     <li class="nav-item {{request() -> routeIs('home') ? 'active' : ''}} ">
                                         <a class="page-scroll" href="{{ route ('home')}}#home">Home</a>
                                     </li>
+                                    <li class="nav-item {{request() -> routeIs('foodtrucks') ? 'active' : ''}}">
+                                        <a class="page-scrolls" href="{{ route('foodtrucks')}}">Foodtrucks</a>
+                                    </li>
+                                    <li class="nav-item {{request() -> routeIs('trailers') ? 'active' : ''}}">
+                                        <a class="page-scrolls" href="{{ route('trailers')}}">Trailers</a>
+                                    </li>
+                                    <li class="nav-item {{request() -> routeIs('about-us') ? 'active' : ''}}">
+                                        <a class="page-scrolls" href="{{ route('about-us')}}">About Us</a>
+                                    </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="{{ route ('home')}}#why">Why</a>
+                                        <a class="page-scroll" href="{{ route ('home')}}#why">Why Us</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="{{ route ('home')}}#cards">Cards</a>
                                     </li>
+
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#footertop">Contact</a>
+                                        <a class="page-scroll" href="#footer">Contact</a>
                                     </li>
-                                    <li class="nav-item {{request() -> routeIs('trailers') ? 'active' : ''}}">
-                                        <a class="page-scroll" href="{{ route('trailers')}}">Trailers</a>
-                                    </li>
-                                    <li class="nav-item {{request() -> routeIs('foodtrucks') ? 'active' : ''}}">
-                                        <a class="page-scroll" href="{{ route('foodtrucks')}}">Foodtrucks</a>
-                                    </li>
-                                    <li class="nav-item {{request() -> routeIs('about-us') ? 'active' : ''}}">
-                                        <a class="page-scroll " href="{{ route('about-us')}}">About Us</a>
-                                    </li>
+
                                     <li class="nav-item">
                                         <a  id="wa" href="https://wa.me/+1305989611" >
                                             <span class="badge rounded-pill bg-warning" style="color: #201f1e;padding: 7px 15px;">
                                                 <i class="lni lni-whatsapp" style="margin: 0 4px;"></i>
-                                                <span id="wanum" style="display: none">+1 (305) 989 - 6611</span>
+                                                <span id="wanum" style="display: none"><em>+1 (305) 989 - 6611</em></span>
                                             </span>
                                         </a>
                                     </li>
@@ -133,13 +135,12 @@
     </div>
     <!--====== CONTENT START ======-->
     <!--====== PART START ======-->
-    <img id="footertop" class="svg mb-n1" src="images/footer-shape-1.svg" alt="shape">
     <footer id="footer" class="footer-area">
         <div class="footer-widget pt-90 pb-120">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
-                        <div class="footer-about mt-50 wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                        <div class="footer-about mt-50 wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
                             <a class="logo" href="#">
                                 <img src="images/logo.png" alt="Logo Y&Y Window Service Corp">
                             </a>
@@ -158,7 +159,7 @@
                         </div> <!-- footer link -->
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="footer-contact mt-45 wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                        <div class="footer-contact mt-45 wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
                             <div class="footer-title">
                                 <h4 class="title">Contact with Us</h4>
                             </div>
@@ -196,8 +197,14 @@
                     <div class="col-lg-12">
                         <div class="copyright justify-content-between pb-20 pt-20">
                             <div class="copyright-text text-center">
-                                <p class="text">©2023, <a href="#">Y&Y Window Services Corp.</a> All Rights reserved</p>
-                                <p class="text" style="font-size: xx-small;">Template Crafted by <a rel="nofollow" href="https://uideck.com">UIdeck</a></p>
+                                <p class="text">©2023, <a href="#">Y&Y Window Services Corp.</a>
+                                    <br> All Rights reserved</p>
+                                <p class="text" style="font-size: xx-small;">
+                                    Template Crafted by
+                                    <a rel="nofollow" href="https://uideck.com">UIdeck</a>
+                                    and Website Developed by
+                                    <a rel="nofollow" href="https://www.google.com">VQM</a>
+                                </p>
                             </div> <!-- copyright text -->
                         </div> <!-- copyright -->
                     </div>

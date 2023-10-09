@@ -9,7 +9,7 @@
             </div>
         </div> <!-- row -->
         <div class="row">
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-12 col-lg-4 col-sm-6">
                 <div class="single-services services-color-1 text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
                     <div class="services-icon d-flex align-items-center justify-content-center">
                         <i class="lni lni-briefcase"></i>
@@ -21,7 +21,7 @@
                     </div>
                 </div> <!-- single services -->
             </div>
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-12 col-lg-4 col-sm-6">
                 <div class="single-services services-color-2 text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.4s">
                     <div class="services-icon d-flex align-items-center justify-content-center">
                         <i class="lni lni-layers"></i>
@@ -33,7 +33,7 @@
                     </div>
                 </div> <!-- single services -->
             </div>
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-12 col-lg-4 col-sm-12">
                 <div class="single-services services-color-1 text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.6s">
                     <div class="services-icon d-flex align-items-center justify-content-center">
                         <i class="lni lni-handshake"></i>
@@ -42,18 +42,6 @@
                         <h4 class="services-title"><a href="#">Flexibility</a></h4>
                         <p class="text">A good cleaning and moving service must be flexible in terms of hours and services offered.
                             Must be able to adapt to customer needs, becasuse our reason for being is our customers</p>
-                    </div>
-                </div> <!-- single services -->
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="single-services services-color-2 text-center mt-30 wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.8s">
-                    <div class="services-icon d-flex align-items-center justify-content-center">
-                        <i class="lni lni-money-protection"></i>
-                    </div>
-                    <div class="services-content">
-                        <h4 class="services-title"><a href="#">Prices</a></h4>
-                        <p class="text">A good cleaning and moving service should offer reasonable prices for its services.
-                            It must be transparent about cost and have no hidden charges. A fair price for a good job is all you need.</p>
                     </div>
                 </div> <!-- single services -->
             </div>

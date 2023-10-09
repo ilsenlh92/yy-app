@@ -13,10 +13,9 @@
                 <div class="card bg-dark text-white card-img-container">
                     <img class="card-img card-img-transition" src="images/cards/card1.webp" alt="Card image" data-images="images/cards/card1.webp,images/cards/card2.webp,images/cards/card3.webp">
                     <div class="card-img-overlay">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text">Last updated 3 mins ago</p>
-                      <button type="button" class="btn btn-warning position-absolute" style="right: 10%; bottom: 10%;">Button</button>
+                      <h1 class="card-title"><span style="color: white">FOOD</span> TRUCKS</h1>
+                      <p class="card-text">We are the premier custom food truck builder in South Florida. We manufacture 100% functional and stylish food trucks, so you can take the flavor of your business on wheels anywhere you go.</p>
+                      <a type="button" href="{{ route('foodtrucks')}}" class="btn btn-warning position-absolute" style="right: 10%; bottom: 10%;">GO!</a>
                     </div>
                   </div>
             </div>
@@ -24,10 +23,9 @@
                 <div class="card bg-dark text-white card-img-container">
                     <img class="card-img card-img-transition" src="images/cards/card1i.webp" alt="Card image" data-images="images/cards/card1i.webp,images/cards/card2i.webp,images/cards/card3i.webp">
                     <div class="card-img-overlay">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text">Last updated 3 mins ago</p>
-                      <button type="button" class="btn btn-warning position-absolute" style="right: 10%; bottom: 10%;">Button</button>
+                      <h1 class="card-title"><span style="color: white">CUSTOM</span> TRAILERS</h1>
+                      <p class="card-text">We are the custom food trailer builder you’re looking for! Contact us and amaze your customers at any stop.</p>
+                      <a type="button" class="btn btn-warning position-absolute" href="{{ route('trailers')}}" style="right: 10%; bottom: 10%;">GO!</a>
                     </div>
                   </div>
             </div>
@@ -35,10 +33,9 @@
                 <div class="card bg-dark text-white card-img-container">
                     <img class="card-img card-img-transition" src="images/cards/card1r.webp" alt="Card image" data-images="images/cards/card1r.webp,images/cards/card2r.webp,images/cards/card3r.webp">
                     <div class="card-img-overlay">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text">Last updated 3 mins ago</p>
-                      <button type="button" class="btn btn-warning position-absolute" style="right: 10%; bottom: 10%;">Button</button>
+                      <h1 class="card-title"><span style="color: white">RESTAURANT</span>  EQUIPMENT</h1>
+                      <p class="card-text">We design and equip exceptional and functional gastronomic spaces with the best cooking and refrigeration equipment to make your restaurant or hotel kitchen run perfectly.</p>
+                      <button type="button" class="btn btn-warning position-absolute" style="right: 10%; bottom: 10%;">GO!</button>
                     </div>
                   </div>
             </div>

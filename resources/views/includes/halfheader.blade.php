@@ -10,7 +10,7 @@
                 </div>
                 <div class="header-overlay"></div>
                 <div class="header-content">
-                    <h1>{{Route::currentRouteName()}}</h1>
+                    <h1>{{str_replace("-", " ", Route::currentRouteName())}}</h1>
                     <p>We manufacture and customize your Food Truck</p>
                 </div>
             </div> <!-- row -->

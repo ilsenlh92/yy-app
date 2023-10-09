@@ -65,7 +65,7 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="images/swiper1.webp" alt="Imagen 1">
+                <img src="images/swiper1.webp" alt="trailers">
                 <div class="overlay">
                     <div class="carda">
                         <h2>We make DREAMS COME TRUE</h2>
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <img src="images/swiper2.webp" alt="Imagen 2">
+                <img src="images/swiper2.webp" alt="trailers">
                 <div class="overlay">
                     <div class="carda">
                         <h2>We TRANSFORM VISIONS INTO REALITY</h2>

@@ -24,7 +24,6 @@ $(function () {
     });
 
 
-
     //===== Section Menu Active
 
     var scrollLink = $('.page-scroll');
@@ -34,7 +33,7 @@ $(function () {
 
         scrollLink.each(function () {
 
-            var sectionOffset = $(this.hash).offset().top - 100;
+            var sectionOffset = $(this.hash).offset().top - 120;
 
             if (sectionOffset <= scrollbarLocation) {
                 $(this).parent().addClass('active');
@@ -42,8 +41,6 @@ $(function () {
             }
         });
     });
-
-
 
 
     //===== close navbar-collapse when a  clicked
