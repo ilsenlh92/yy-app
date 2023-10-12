@@ -17,7 +17,7 @@
     @section('navbar')
         @parent
         <!--====== HEADER PART START ======-->
-        @include('includes.halfheader')
+        @include('includes.header')
         <!--====== HEADER PART ENDS ======-->
     @endsection
     @section('content')

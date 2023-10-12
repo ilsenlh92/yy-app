@@ -3,39 +3,40 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="section-title text-center pb-25">
-                    <h3 class="title">Why You Should Choose <span style="text-transform: uppercase; color: #e6905c;">windows service corp</span></h3>
-                    <p class="text">Cleaning and moving services are very important to make sure everything is in order and clean before you move.</p>
+                    <h3 class="title">{{ __('cards.general-card-title') }}<span style="text-transform: uppercase; color: #e6905c;">{{ str_replace("_", " ", config('app.name')) }}
+                    </span></h3>
+                    <p class="text">{{ __('cards.general-card-description') }}</p>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->
         <div class="row align-items-center">
             <div class="col-lg-4 p-4">
                 <div class="card bg-dark text-white card-img-container">
-                    <img class="card-img card-img-transition" src="images/cards/card1.webp" alt="Card image" data-images="images/cards/card1.webp,images/cards/card2.webp,images/cards/card3.webp">
+                    <img class="card-img card-img-transition" src="{{ asset('images/cards/card1.webp') }}" alt="Card image" data-images="images/cards/card1.webp,images/cards/card2.webp,images/cards/card3.webp">
                     <div class="card-img-overlay">
-                      <h1 class="card-title"><span style="color: white">FOOD</span> TRUCKS</h1>
-                      <p class="card-text">We are the premier custom food truck builder in South Florida. We manufacture 100% functional and stylish food trucks, so you can take the flavor of your business on wheels anywhere you go.</p>
-                      <a type="button" href="{{ route('foodtrucks')}}" class="btn btn-warning position-absolute" style="right: 10%; bottom: 10%;">GO!</a>
+                      <h1 class="card-title"><span style="color: white">{{ __('cards.card-1-title-1') }}</span> {{ __('cards.card-1-title-2') }}</h1>
+                      <p class="card-text">{{ __('cards.card-1-text') }}</p>
+                      <a type="button" href="{{ route('foodtrucks')}}" class="btn btn-warning position-absolute" style="right: 10%; bottom: 10%;">{{ __('cards.general-go') }}</a>
                     </div>
                   </div>
             </div>
             <div class="col-lg-4 p-4">
                 <div class="card bg-dark text-white card-img-container">
-                    <img class="card-img card-img-transition" src="images/cards/card1i.webp" alt="Card image" data-images="images/cards/card1i.webp,images/cards/card2i.webp,images/cards/card3i.webp">
+                    <img class="card-img card-img-transition" src="images/cards/card4.webp" alt="Card image" data-images="images/cards/card4.webp,images/cards/card5.webp,images/cards/card6.webp">
                     <div class="card-img-overlay">
-                      <h1 class="card-title"><span style="color: white">CUSTOM</span> TRAILERS</h1>
-                      <p class="card-text">We are the custom food trailer builder you’re looking for! Contact us and amaze your customers at any stop.</p>
-                      <a type="button" class="btn btn-warning position-absolute" href="{{ route('trailers')}}" style="right: 10%; bottom: 10%;">GO!</a>
+                      <h1 class="card-title"><span style="color: white">{{ __('cards.card-2-title-1') }}</span> {{ __('cards.card-2-title-2') }}</h1>
+                      <p class="card-text">{{ __('cards.card-1-text') }}</p>
+                      <a type="button" class="btn btn-warning position-absolute" href="{{ route('trailers')}}" style="right: 10%; bottom: 10%;">{{ __('cards.general-go') }}</a>
                     </div>
                   </div>
             </div>
             <div class="col-lg-4 p-4">
                 <div class="card bg-dark text-white card-img-container">
-                    <img class="card-img card-img-transition" src="images/cards/card1r.webp" alt="Card image" data-images="images/cards/card1r.webp,images/cards/card2r.webp,images/cards/card3r.webp">
+                    <img class="card-img card-img-transition" src="images/cards/card7.webp" alt="Card image" data-images="images/cards/card7.webp,images/cards/card8.webp,images/cards/card9.webp">
                     <div class="card-img-overlay">
-                      <h1 class="card-title"><span style="color: white">RESTAURANT</span>  EQUIPMENT</h1>
-                      <p class="card-text">We design and equip exceptional and functional gastronomic spaces with the best cooking and refrigeration equipment to make your restaurant or hotel kitchen run perfectly.</p>
-                      <button type="button" class="btn btn-warning position-absolute" style="right: 10%; bottom: 10%;">GO!</button>
+                      <h1 class="card-title"><span style="color: white">{{ __('cards.card-3-title-1') }}</span>  {{ __('cards.card-3-title-2') }}</h1>
+                      <p class="card-text">{{ __('cards.card-1-text') }}</p>
+                      <button type="button" class="btn btn-warning position-absolute" style="right: 10%; bottom: 10%;">{{ __('cards.general-go') }}</button>
                     </div>
                   </div>
             </div>
@@ -52,7 +53,7 @@
         imgElements[i].style.transition = '0.25s ease-in-out, transform 1s ease-in-out'; // Añade transición suave
     }
 
-   // Primera tarjeta cambia cada 4 segundos
+// Primera tarjeta cambia cada 4 segundos
 setInterval(changeImage, 4000, imgElements[0]);
 
 // Segunda tarjeta cambia cada 5 segundos

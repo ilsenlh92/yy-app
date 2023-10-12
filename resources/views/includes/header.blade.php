@@ -1,19 +1,34 @@
-<header class="header-area">
-    <div id="home" class="header-hero bg_cover d-lg-flex align-items-center">
+<header  id="{{Route::currentRouteName()}}" class="header-area">
+    <div class="header-hero {{ request() -> routeIs('home')? '' : 'half' }} bg_cover d-lg-flex align-items-center">
         <div class="container">
             <div class="row align-items-center justify-content-center justify-content-lg-between">
-
                 <div class="fullscreen-video-wrap">
-                    <video src="{{ asset('video/videoplayback.webm') }}" autoplay muted loop>
-                        Tu navegador no soporta el elemento de video.
-                    </video>
+                    <!-- Video -->
+                   {{--  <video src="{{ asset('video/videoplayback.webm') }}" autoplay muted loop>
+                        {{ __('header.not-supported') }}
+                    </video> --}}
+                    <div class="swiper-container">
+                        <!-- Slides -->
+                        <div class="swiper-wrapper">
+                            @for ($i = 1; $i <= 3; $i++)
+                                <div class="swiper-slide"><img src="{{asset('images/header/h'.$i.'.webp')}}" class="swiper-image"></div>
+                            @endfor
+                            <div class="header-overlay"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="header-overlay"></div>
                 <div class="header-content">
-                    <h1>Windows Service Corp</h1>
-                    <p>We manufacture and customize your Food Truck</p>
+                    {{-- Muestra el titulo de la ruta si es difernte a la home --}}
+                    @if (request() -> routeIs('home'))
+                        <h1>{{ __('header.title') }}</h1>
+                    @else
+                        <h1>{{str_replace("-", " ", Route::currentRouteName())}}</h1>
+                    @endif
+                   <p>{{ __('header.description') }}</p>
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
     </div> <!-- header hero -->
 </header>
+

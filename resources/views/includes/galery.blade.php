@@ -6,47 +6,31 @@
 <section id="galery" class="galery pt-70 pb-120">
     <div class="container gallery-container">
         <div class="row" style="justify-content: center;">
-            <h2>Gallery</h2>
+            <h2>{{ __('galery.galery' )}}</h2>
         </div>
         <div class="tz-gallery">
             <div class="row">
                 <div class="col-12 p-5" align="center">
-                    <button class="btn btn-light  filter-button" data-filter="all">All</button>
-                    <button class="btn btn-default filter-button" data-filter="ft">Foodtrucks</button>
-                    <button class="btn btn-warning  filter-button" data-filter="tr">Trailers</button>
+                    <button class="btn btn-light  filter-button" data-filter="all">{{ __('galery.all' )}}</button>
+                    <button class="btn btn-default filter-button" data-filter="ft">{{ __('galery.foodtrucks' )}}</button>
+                    <button class="btn btn-warning  filter-button" data-filter="tr">{{ __('galery.trailers' )}}</button>
                 </div>
             </div>
             <div class="row">
+                @for ($i = 1 ; $i < 4 ; $i++)
                 <div class="col-sm-6 col-md-4 filter ft">
                     <a class="lightbox" href="images/galery/foodtrucks/1.webp">
-                        <img class="img-responsive" src="images/galery/foodtrucks/1.webp" alt="foodtrucks">
+                        <img class="img-responsive" src="images/galery/foodtrucks/{{ $i }}.webp" alt="foodtrucks">
                     </a>
                 </div>
-                <div class="col-sm-6 col-md-4 filter ft">
-                    <a class="lightbox" href="images/galery/foodtrucks/2.webp">
-                        <img class="img-responsive" src="images/galery/foodtrucks/2.webp" alt="foodtrucks">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-4 filter ft">
-                    <a class="lightbox" href="images/galery/foodtrucks/3.webp">
-                        <img class="img-responsive" src="images/galery/foodtrucks/3.webp" alt="foodtrucks">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-4 filter tr">
-                    <a class="lightbox" href="images/galery/trailers/1.webp">
-                        <img class="img-responsive" src="images/galery/trailers/1.webp" alt="trailers">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-4 filter tr">
-                    <a class="lightbox" href="images/galery/trailers/2.webp">
-                        <img class="img-responsive" src="images/galery/trailers/2.webp" alt="trailers">
-                    </a>
-                </div>
+                @endfor
+                @for ($i = 1 ; $i < 4 ; $i++)
                 <div class="col-sm-6 col-md-4 filter tr">
                     <a class="lightbox" href="images/galery/trailers/3.webp">
-                        <img class="img-responsive" src="images/galery/trailers/3.webp" alt="trailers">
+                        <img class="img-responsive" src="images/galery/trailers/{{ $i }}.webp" alt="trailers">
                     </a>
                 </div>
+                @endfor
             </div>
 
         </div>
