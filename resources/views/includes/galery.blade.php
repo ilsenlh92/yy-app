@@ -19,7 +19,7 @@
             <div class="row">
                 @for ($i = 1 ; $i < 4 ; $i++)
                 <div class="col-sm-6 col-md-4 filter ft">
-                    <a class="lightbox" href="images/galery/foodtrucks/1.webp">
+                    <a class="lightbox" href="images/galery/foodtrucks/{{ $i }}.webp">
                         <img class="img-responsive" src="images/galery/foodtrucks/{{ $i }}.webp" alt="foodtrucks">
                         <div class="overlay" style="background:linear-gradient(350deg, black, transparent);"></div>
                     </a>
@@ -27,7 +27,7 @@
                 @endfor
                 @for ($i = 1 ; $i < 4 ; $i++)
                 <div class="col-sm-6 col-md-4 filter tr">
-                    <a class="lightbox" href="images/galery/trailers/3.webp">
+                    <a class="lightbox" href="images/galery/trailers/{{ $i }}.webp">
                         <img class="img-responsive" src="images/galery/trailers/{{ $i }}.webp" alt="trailers">
                         <div class="overlay" style="background:linear-gradient(350deg, black, transparent);"></div>
                     </a>

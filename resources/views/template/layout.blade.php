@@ -203,7 +203,7 @@
                                     Template Crafted by
                                     <a rel="nofollow" href="https://uideck.com">UIdeck</a>
                                     and Website Developed by
-                                    <a rel="nofollow" href="https://www.google.com">VQM</a>
+                                    <a rel="nofollow" href="https://www.google.com">VIQ</a>
                                 </p>
                             </div> <!-- copyright text -->
                         </div> <!-- copyright -->
@@ -272,6 +272,7 @@
             });
         });
     </script>
+    <!--====== Swiper js ======-->
      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
      <script>
          var swiper = new Swiper('.swiper-container', {
@@ -283,7 +284,5 @@
          });
      </script>
     @show
-
 </body>
-
 </html>
