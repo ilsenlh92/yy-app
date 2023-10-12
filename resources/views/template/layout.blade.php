@@ -36,6 +36,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     @show
 
 </head>
@@ -91,26 +92,26 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto nav justify-content-end">
                                     <li class="nav-item {{request() -> routeIs('home') ? 'active' : ''}} ">
-                                        <a class="page-scroll" href="{{ route ('home')}}#home">Home</a>
+                                        <a class="page-scroll" href="{{ route ('home')}}#home">{{ __('layout.home')}}</a>
                                     </li>
                                     <li class="nav-item {{request() -> routeIs('foodtrucks') ? 'active' : ''}}">
-                                        <a class="page-scrolls" href="{{ route('foodtrucks')}}">Foodtrucks</a>
+                                        <a class="page-scrolls" href="{{ route('foodtrucks')}}">{{ __('layout.foodtrucks')}}</a>
                                     </li>
                                     <li class="nav-item {{request() -> routeIs('trailers') ? 'active' : ''}}">
-                                        <a class="page-scrolls" href="{{ route('trailers')}}">Trailers</a>
+                                        <a class="page-scrolls" href="{{ route('trailers')}}">{{ __('layout.trailers')}}</a>
                                     </li>
                                     <li class="nav-item {{request() -> routeIs('about-us') ? 'active' : ''}}">
-                                        <a class="page-scrolls" href="{{ route('about-us')}}">About Us</a>
+                                        <a class="page-scrolls" href="{{ route('about-us')}}">{{ __('layout.about-us')}}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="{{ route ('home')}}#why">Why Us</a>
+                                        <a class="page-scroll" href="{{ route ('home')}}#why">{{ __('layout.why-us')}}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="{{ route ('home')}}#cards">Cards</a>
+                                        <a class="page-scroll" href="{{ route ('home')}}#cards">{{ __('layout.cards')}}</a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#footer">Contact</a>
+                                        <a class="page-scroll" href="#footer">{{ __('layout.contact')}}</a>
                                     </li>
 
                                     <li class="nav-item">
@@ -139,13 +140,12 @@
         <div class="footer-widget pt-90 pb-120">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-6 col-md-6">
                         <div class="footer-about mt-50 wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
                             <a class="logo" href="#">
                                 <img src="images/logo.png" alt="Logo Y&Y Window Service Corp">
                             </a>
-                            <p class="text">If you are looking for a removal and cleaning company that offers you a high quality service, professionalism, flexibility and competitive prices,
-                                do not hesitate to contact us. We are sure that you will be surprised by the quality of our service and the commitment of our work team.</p>
+                            <p class="text">{{ __('layout.footer-text')}}</p>
                             <ul class="social">
                                 <li><a href="#"><i class="lni lni-facebook"></i></a></li>
                                 <li><a href="#"><i class="lni lni-twitter"></i></a></li>
@@ -154,14 +154,14 @@
                             </ul>
                         </div> <!-- footer about -->
                     </div>
-                    <div class="col-lg-5 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="footer-link d-flex flex-wrap">
                         </div> <!-- footer link -->
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="footer-contact mt-45 wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                        <div class="footer-contact mt-150 wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
                             <div class="footer-title">
-                                <h4 class="title">Contact with Us</h4>
+                                <h4 class="title">{{ __('layout.contact-with-us')}}</h4>
                             </div>
                             <ul class="contact-list">
                                 <li>
@@ -198,7 +198,7 @@
                         <div class="copyright justify-content-between pb-20 pt-20">
                             <div class="copyright-text text-center">
                                 <p class="text">©2023, <a href="#">Y&Y Window Services Corp.</a>
-                                    <br> All Rights reserved</p>
+                                    <br> {{ __('layout.rights')}}</p>
                                 <p class="text" style="font-size: xx-small;">
                                     Template Crafted by
                                     <a rel="nofollow" href="https://uideck.com">UIdeck</a>
@@ -272,6 +272,16 @@
             });
         });
     </script>
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     <script>
+         var swiper = new Swiper('.swiper-container', {
+             effect: 'fade',
+             speed: 2000,
+             autoplay: {
+                 delay: 5000,
+             },
+         });
+     </script>
     @show
 
 </body>
