@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
+
+use App\Http\Controllers\Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +20,8 @@ Route::get('/', function () {
 })->name('home');
 Route::view('/trailers','pages.trailers')->name('trailers');
 Route::view('/foodtrucks','pages.foodtrucks')->name('foodtrucks');
-Route::view('/about-us','pages.about-us')->name('about-us');
+Route::get('/about-us', [Controller::class, 'show'])->name('about-us');
+Route::view('/construction','pages.on-construction')->name('on-construction');
 
 //ruta ofrecida por APP para la Internacionalizacion
 Route::get('/greeting/{locale}', function (string $locale) {
