@@ -1,6 +1,12 @@
 <section class="swiper">
     <div class="swiper-container">
         <div class="swiper-wrapper">
+            {{--/**
+             * Loops through swiper slide images and overlays.
+             * Renders a swiper slide div for each image, containing the image and overlay.
+             * The image src and alt text are rendered using the loop variable. 
+             * The overlay content is rendered from language lines using the loop variable.
+            */--}}
             @for ($i = 1; $i < 3; $i++)
                 <div class="swiper-slide">
                     <img src="{{ asset('images/swiper'.$i.'.webp') }}" alt="trailers">

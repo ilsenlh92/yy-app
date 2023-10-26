@@ -10,6 +10,11 @@
                     <div class="swiper-container">
                         <!-- Slides -->
                         <div class="swiper-wrapper">
+                            {{--/**
+                             * Loops through numbers 1 to 3 to generate 3 swiper slides with header images.
+                             * Uses Blade template syntax to insert the image asset path and concatenate 
+                             * the loop variable to the filename.
+                             */--}}
                             @for ($i = 1; $i <= 3; $i++)
                                 <div class="swiper-slide"><img src="{{asset('images/header/h'.$i.'.webp')}}" class="swiper-image"></div>
                             @endfor

@@ -7,10 +7,13 @@
         <!--====== HEADER PART ENDS ======-->
     @endsection
     @section('content')
-        <!--====== GALERY PART START ======-->
-        @include('includes.foodtrucks.description')
-        <!--====== CARDS PART ENDS ======-->
+        <!--====== INFO PART START ======-->
+        @include('includes.foodtrucks-trailers.description')
+        <!--====== INFO PART ENDS ======-->
          <!--====== FOODTRUCKS GALERY PART START ======-->
         @include('includes.full-galery')
         <!--====== FOODTRUCKS GALERY PART ENDS ======-->
+        <!--====== CAROUSEL GALERY PART START ======-->
+        @include('includes.foodtrucks-trailers.carousel')
+        <!--====== CAROUSEL GALERY PART ENDS ======-->
     @endsection
