@@ -1,7 +1,6 @@
 <?php
 return [
-    'general-title' => 'Why You Should Choose',
-    'general-description' => 'Cleaning and moving are very important to make sure everything is in order and clean before you move.',
+    'general-title' => 'Why You Should Choose Us',
 
     'title-1' => 'Professionalism',
     'text-1' => 'We have a team of skilled and certified technicians who can handle any project, big or small, with efficiency and attention to detail.

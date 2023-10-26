@@ -1,8 +1,6 @@
 <?php
 return [
     //cards, son tres card cada una tiene dos titulos uno con un color y otro con otro
-    'general-card-title' => 'Why You Should Choose',
-    'general-card-description' => 'Cleaning and moving services are very important to make sure everything is in order and clean before you move.',
     'general-go' => 'Go!!',
 
     'card-1-title-1' => 'FOOD',
