@@ -1,42 +1,23 @@
 <section id="cards" class="pt-70 pb-70">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-7">
-                <div class="section-title text-center pb-25">
-                    <h3 class="title">{{ __('cards.general-card-title') }}<span style="text-transform: uppercase; color: #e6905c;">{{ str_replace("_", " ", config('app.name')) }}
-                    </span></h3>
-                    <p class="text">{{ __('cards.general-card-description') }}</p>
-                </div> <!-- section title -->
-            </div>
-        </div> <!-- row -->
-        <div class="row align-items-center">
-            <div class="col-lg-4 p-4">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12 col-md-6 col-lg-5 p-4">
                 <div class="card bg-dark text-white card-img-container">
                     <img class="card-img card-img-transition" src="{{ asset('images/cards/card1.webp') }}" alt="Card image" data-images="images/cards/card1.webp,images/cards/card2.webp,images/cards/card3.webp">
                     <div class="card-img-overlay">
-                      <h1 class="card-title"><span style="color: white">{{ __('cards.card-1-title-1') }}</span> {{ __('cards.card-1-title-2') }}</h1>
+                      <h1 class="card-title"><span style="color: white">{{ __('cards.card-1-title-1') }}</span> <br> {{ __('cards.card-1-title-2') }}</h1>
                       <p class="card-text">{{ __('cards.card-1-text') }}</p>
                       <a type="button" href="{{ route('foodtrucks')}}" class="btn btn-warning position-absolute" style="right: 10%; bottom: 10%;">{{ __('cards.general-go') }}</a>
                     </div>
                   </div>
             </div>
-            <div class="col-lg-4 p-4">
+            <div class="col-12 col-md-6 col-lg-5 p-4">
                 <div class="card bg-dark text-white card-img-container">
                     <img class="card-img card-img-transition" src="images/cards/card4.webp" alt="Card image" data-images="images/cards/card4.webp,images/cards/card5.webp,images/cards/card6.webp">
                     <div class="card-img-overlay">
-                      <h1 class="card-title"><span style="color: white">{{ __('cards.card-2-title-1') }}</span> {{ __('cards.card-2-title-2') }}</h1>
+                      <h1 class="card-title"><span style="color: white">{{ __('cards.card-2-title-1') }}</span> <br> {{ __('cards.card-2-title-2') }}</h1>
                       <p class="card-text">{{ __('cards.card-1-text') }}</p>
                       <a type="button" class="btn btn-warning position-absolute" href="{{ route('trailers')}}" style="right: 10%; bottom: 10%;">{{ __('cards.general-go') }}</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-lg-4 p-4">
-                <div class="card bg-dark text-white card-img-container">
-                    <img class="card-img card-img-transition" src="images/cards/card7.webp" alt="Card image" data-images="images/cards/card7.webp,images/cards/card8.webp,images/cards/card9.webp">
-                    <div class="card-img-overlay">
-                      <h1 class="card-title"><span style="color: white">{{ __('cards.card-3-title-1') }}</span>  {{ __('cards.card-3-title-2') }}</h1>
-                      <p class="card-text">{{ __('cards.card-1-text') }}</p>
-                      <button type="button" class="btn btn-warning position-absolute" style="right: 10%; bottom: 10%;">{{ __('cards.general-go') }}</button>
                     </div>
                   </div>
             </div>

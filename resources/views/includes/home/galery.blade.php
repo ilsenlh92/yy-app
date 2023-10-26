@@ -1,7 +1,7 @@
-@section('styles')
+{{-- @section('styles')
     @parent
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
-@endsection
+@endsection --}}
 
 <section id="galery" class="galery pt-70 pb-120">
     <div class="container gallery-container">
@@ -19,16 +19,16 @@
             <div class="row">
                 @for ($i = 1 ; $i < 4 ; $i++)
                 <div class="col-sm-6 col-md-4 filter ft">
-                    <a class="lightbox" href="images/galery/foodtrucks/{{ $i }}.webp">
-                        <img class="img-responsive" src="images/galery/foodtrucks/{{ $i }}.webp" alt="foodtrucks">
+                    <a class="lightbox" href="{{asset('images/galery/foodtrucks/'.$i.'.webp')}}">
+                        <img class="img-responsive" src="{{asset('images/galery/foodtrucks/'.$i.'.webp')}}" alt="foodtrucks">
                         <div class="overlay" style="background:linear-gradient(350deg, black, transparent);"></div>
                     </a>
                 </div>
                 @endfor
                 @for ($i = 1 ; $i < 4 ; $i++)
                 <div class="col-sm-6 col-md-4 filter tr">
-                    <a class="lightbox" href="images/galery/trailers/{{ $i }}.webp">
-                        <img class="img-responsive" src="images/galery/trailers/{{ $i }}.webp" alt="trailers">
+                    <a class="lightbox" href="{{asset('images/galery/trailers/'.$i.'.webp')}}">
+                        <img class="img-responsive" src="{{asset('images/galery/trailers/'.$i.'.webp')}}">
                         <div class="overlay" style="background:linear-gradient(350deg, black, transparent);"></div>
                     </a>
                 </div>
@@ -39,7 +39,7 @@
 
     </div>
 </section>
-
+{{-- 
 @section('scripts')
 @parent
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
@@ -60,4 +60,4 @@
 });
 
 </script>
-@endsection
+@endsection --}}

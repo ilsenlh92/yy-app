@@ -17,5 +17,5 @@
 </section>
 <section class="callatention">
     <p class="mb-3">{{ __('swiper.call') }}</p>
-    <a class="btn btn-light btn-lg" href="Jumbo action link" role="button">{{ __('swiper.button') }}</a>
+    <a class="btn btn-light btn-lg" href="{{ route ('on-construction')}}" role="button">{{ __('swiper.button') }}</a>
 </section>

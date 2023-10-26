@@ -1,288 +1,138 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>Y&Y Window Service Corp</title>
 
-    <title>Y&Y Window Service Corp</title>
+        @section('styles')
+            <!--====== Favicon Icon ======-->
+            <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
-    @section('styles')
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+            <!--====== Animate CSS ======-->
+            <link rel="stylesheet" href="css/animate.css">
 
-    <!--====== Animate CSS ======-->
-    <link rel="stylesheet" href="css/animate.css">
+            <!--====== lineicons CSS ======-->
+            <link rel="stylesheet" href="css/lineicons.css">
 
-    <!--====== lineicons CSS ======-->
-    <link rel="stylesheet" href="css/lineicons.css">
+            <!--====== Bootstrap CSS ======-->
+            <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!--====== Bootstrap CSS ======-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+            <!--====== Default CSS ======-->
+            <link rel="stylesheet" href="css/default.css">
 
-    <!--====== Default CSS ======-->
-    <link rel="stylesheet" href="css/default.css">
+            <!--====== Style CSS ======-->
+            <link rel="stylesheet" href="css/style.css">
 
-    <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="css/style.css">
+            <!--====== Plans CSS ======-->
+            <link rel="stylesheet" href="css/plans.css">
 
-    <!--====== Plans CSS ======-->
-    <link rel="stylesheet" href="css/plans.css">
+            <!--====== Contact CSS ======-->
+            <link rel="stylesheet" href="css/contact.css">
 
-    <!--====== Contact CSS ======-->
-    <link rel="stylesheet" href="css/contact.css">
+            <!-- Fonts -->
+            <link rel="preconnect" href="https://fonts.bunny.net">
+            <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+            <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    @show
+            <!-- Galery -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+        @show
+    </head>
+    <body class="antialiased">
+        <!--====== PRELOADER PART START ======-->
+        @include('includes.layout.pre-load')
+        <!--====== PRELOADER PART ENDS ======-->
 
-</head>
-
-<body class="antialiased">
-    <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-
-    <!--====== PRELOADER PART START ======-->
-
-    <div class="preloader">
-        <div class="loader">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        @section('navbar')
+            @include('includes.layout.nav')
+        @show
+        
+        <!--====== CONTENT START ======-->
+        <div id='content'>
+            @yield('content')
         </div>
-    </div>
-    <!--====== PRELOADER PART ENDS ======-->
+        <!--====== CONTENT START ======-->
 
-    @if (session('success'))
-        @if (session('success')=='Message sent succesfully')
-            <div id="snackbar">{{ session('success') }}</div>
-        @else
-            <div id="snackbar" style="background-color: red">{{ session('success') }}</div>
-        @endif
-    @endif
+        <!--====== PART START ======-->
+        @include('includes.layout.footer')
+        <!--====== PART ENDS ======-->
 
-    @section('navbar')
-        <div class="navbar-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="/">
-                                <img src="images/logo.png" alt="Logo Y&Y Window Service Corp">
-                                <title id="logo-text"> Window Service Corp </title>
-                            </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul id="nav" class="navbar-nav ml-auto nav justify-content-end">
-                                    <li class="nav-item {{request() -> routeIs('home') ? 'active' : ''}} ">
-                                        <a class="page-scroll" href="{{ route ('home')}}#home">{{ __('layout.home')}}</a>
-                                    </li>
-                                    <li class="nav-item {{request() -> routeIs('foodtrucks') ? 'active' : ''}}">
-                                        <a class="page-scrolls" href="{{ route('foodtrucks')}}">{{ __('layout.foodtrucks')}}</a>
-                                    </li>
-                                    <li class="nav-item {{request() -> routeIs('trailers') ? 'active' : ''}}">
-                                        <a class="page-scrolls" href="{{ route('trailers')}}">{{ __('layout.trailers')}}</a>
-                                    </li>
-                                    <li class="nav-item {{request() -> routeIs('about-us') ? 'active' : ''}}">
-                                        <a class="page-scrolls" href="{{ route('about-us')}}">{{ __('layout.about-us')}}</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="{{ route ('home')}}#why">{{ __('layout.why-us')}}</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="{{ route ('home')}}#cards">{{ __('layout.cards')}}</a>
-                                    </li>
+        <!--====== BACK TOP TOP PART START ======-->
+        <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+        <!--====== BACK TOP TOP PART ENDS ======-->
 
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#footer">{{ __('layout.contact')}}</a>
-                                    </li>
+        @section('scripts')
+            <!--====== Jquery js ======-->
+            <script src="js/vendor/jquery-1.12.4.min.js"></script>
+            <script src="js/vendor/modernizr-3.7.1.min.js"></script>
 
-                                    <li class="nav-item">
-                                        <a  id="wa" href="https://wa.me/+1305989611" >
-                                            <span class="badge rounded-pill bg-warning" style="color: #201f1e;padding: 7px 15px;">
-                                                <i class="lni lni-whatsapp" style="margin: 0 4px;"></i>
-                                                <span id="wanum" style="display: none"><em>+1 (305) 989 - 6611</em></span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div> <!-- navbar collapse -->
-                        </nav> <!-- navbar -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- navbar area -->
-    @show
-    <!--====== CONTENT START ======-->
-    <div id='content'>
-        @yield('content')
-    </div>
-    <!--====== CONTENT START ======-->
-    <!--====== PART START ======-->
-    <footer id="footer" class="footer-area">
-        <div class="footer-widget pt-90 pb-120">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="footer-about mt-50 wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
-                            <a class="logo" href="#">
-                                <img src="images/logo.png" alt="Logo Y&Y Window Service Corp">
-                            </a>
-                            <p class="text">{{ __('layout.footer-text')}}</p>
-                            <ul class="social">
-                                <li><a href="#"><i class="lni lni-facebook"></i></a></li>
-                                <li><a href="#"><i class="lni lni-twitter"></i></a></li>
-                                <li><a href="#"><i class="lni lni-instagram"></i></a></li>
-                                <li><a href="#"><i class="lni lni-linkedin"></i></a></li>
-                            </ul>
-                        </div> <!-- footer about -->
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-link d-flex flex-wrap">
-                        </div> <!-- footer link -->
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-contact mt-150 wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
-                            <div class="footer-title">
-                                <h4 class="title">{{ __('layout.contact-with-us')}}</h4>
-                            </div>
-                            <ul class="contact-list">
-                                <li>
-                                    <div class="contact-info d-flex">
-                                        <div class="info-content media-body">
-                                            <p class="text"><i class="lni lni-phone"></i> +1 (305) 989 - 6611</p>
-                                        </div>
-                                    </div> <!-- contact info -->
-                                </li>
-                                <li>
-                                    <div class="contact-info d-flex">
-                                        <div class="info-content media-body">
-                                            <p class="text"><a href="http://windowsservicecorp.us"><i class="lni lni-world"></i> windowsservicecorp.us</a></p>
-                                        </div>
-                                    </div> <!-- contact info -->
-                                </li>
-                                <li>
-                                    <div class="contact-info d-flex">
-                                        <div class="info-content media-body">
-                                            <p class="text"><i class="lni lni-map"></i> Tampa, Florida.</p>
-                                        </div>
-                                    </div> <!-- contact info -->
-                                </li>
-                            </ul> <!-- contact list -->
-                        </div> <!-- footer contact -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- footer widget -->
-        <div class="footer-copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="copyright justify-content-between pb-20 pt-20">
-                            <div class="copyright-text text-center">
-                                <p class="text">©2023, <a href="#">Y&Y Window Services Corp.</a>
-                                    <br> {{ __('layout.rights')}}</p>
-                                <p class="text" style="font-size: xx-small;">
-                                    Template Crafted by
-                                    <a rel="nofollow" href="https://uideck.com">UIdeck</a>
-                                    and Website Developed by
-                                    <a rel="nofollow" href="https://www.google.com">VIQ</a>
-                                </p>
-                            </div> <!-- copyright text -->
-                        </div> <!-- copyright -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- footer copyright -->
-    </footer>
-
-    <!--====== PART ENDS ======-->
-
-    <!--====== BACK TOP TOP PART START ======-->
-
-    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
-
-    <!--====== BACK TOP TOP PART ENDS ======-->
-
-    <!--====== PART START ======-->
-
-    <!--
-    <section class="">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-"></div>
-            </div>
-        </div>
-    </section>
--->
-
-    <!--====== PART ENDS ======-->
-    @section('scripts')
-    <!--====== Jquery js ======-->
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-
-    <!--====== Bootstrap js ======-->
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+            <!--====== Bootstrap js ======-->
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
 
 
-    <!--====== WOW js ======-->
-    <script src="js/wow.min.js"></script>
+            <!--====== WOW js ======-->
+            <script src="js/wow.min.js"></script>
 
-    <!--====== Scrolling Nav js ======-->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
+            <!--====== Scrolling Nav js ======-->
+            <script src="js/jquery.easing.min.js"></script>
+            <script src="js/scrolling-nav.js"></script>
 
-    <!--====== Main js ======-->
-    <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function(){
-            // Get the snackbar DIV
-            var x = document.getElementById("snackbar");
-            // Add the "show" class to DIV
-            x.className = "show";
-            // After 3 seconds, remove the show class from DIV
-            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
-        });
-        window.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('wa').addEventListener('mouseover', function() {
-                document.getElementById('wanum').style.display = 'inline';
+            <!--====== Main js ======-->
+            <script src="js/main.js"></script>
+            <script>
+                $(document).ready(function(){
+                    // Get the snackbar DIV
+                    var x = document.getElementById("snackbar");
+                    // Add the "show" class to DIV
+                    x.className = "show";
+                    // After 3 seconds, remove the show class from DIV
+                    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
+                });
+                window.addEventListener('DOMContentLoaded', (event) => {
+                    document.getElementById('wa').addEventListener('mouseover', function() {
+                        document.getElementById('wanum').style.display = 'inline';
+                    });
+
+                    document.getElementById('wa').addEventListener('mouseout', function() {
+                        document.getElementById('wanum').style.display = 'none';
+                    });
+                });
+            </script>
+            <!--====== Swiper js ======-->
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script>
+                var swiper = new Swiper('.swiper-container', {
+                    effect: 'fade',
+                    speed: 2000,
+                    autoplay: {
+                        delay: 5000,
+                    },
+                });
+            </script>
+            
+            <!-- Galery -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+            <script>
+                baguetteBox.run('.tz-gallery');
+                $(".filter-button").click(function(){
+                var value = $(this).attr('data-filter');
+            
+                if(value == "all")
+                {
+                    $('.filter').show('1000');
+                }
+                else
+                {
+                    $(".filter").not('.'+value).hide('3000');
+                    $('.filter').filter('.'+value).show('3000');
+                }
             });
-
-            document.getElementById('wa').addEventListener('mouseout', function() {
-                document.getElementById('wanum').style.display = 'none';
-            });
-        });
-    </script>
-    <!--====== Swiper js ======-->
-     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-     <script>
-         var swiper = new Swiper('.swiper-container', {
-             effect: 'fade',
-             speed: 2000,
-             autoplay: {
-                 delay: 5000,
-             },
-         });
-     </script>
-    @show
-</body>
+            
+            </script>
+        @show
+    </body>
 </html>

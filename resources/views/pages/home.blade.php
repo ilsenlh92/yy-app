@@ -8,18 +8,18 @@
     @endsection
     @section('content')
         <!--====== ELEMENTS PART START ======-->
-        @include('includes.elementS')
+        @include('includes.home.elements')
         <!--====== ELEMENTS PART ENDS ======-->
         <!--====== SERVICES PART START ======-->
-        @include('includes.services')
+        @include('includes.home.services')
         <!--====== SERVICES PART ENDS ======-->
         <!--====== SWIPER PART START ======-->
         @include('includes.swiper')
         <!--====== SWIPER PART ENDS ======-->
         <!--====== CARDS PART START ======-->
-        @include('includes.cards')
+        @include('includes.home.cards')
         <!--====== CARDS PART ENDS ======-->
         <!--====== GALERY PART START ======-->
-         @include('includes.galery')
+         @include('includes.home.galery')
         <!--====== GALERY PART ENDS ======-->
     @endsection

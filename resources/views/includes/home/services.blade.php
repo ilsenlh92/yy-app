@@ -52,8 +52,9 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="section-title text-center pb-25">
-                    <h3 class="title">{{ __('services.general-title') }}<span style="text-transform: uppercase; color: #e6905c;">{{ str_replace("_", " ", config('app.name')) }}</span></h3>
-                    <p class="text">{{ __('services.general-description') }}</p>
+                    <h3 class="title">
+                        {{ __('services.general-title') }}
+                    </h3>
                 </div>
             </div>
         </div>
