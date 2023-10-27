@@ -568,6 +568,10 @@ p {
     text-transform: uppercase;
     font-weight: bold;
 }
+.logo:hover {
+  filter: drop-shadow(0 0 2em #ffbb00d3);
+}
+
 .navbar-area {
   position: absolute;
   top: 0;
