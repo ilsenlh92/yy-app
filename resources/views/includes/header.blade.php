@@ -25,12 +25,14 @@
                 <div class="header-overlay"></div>
                 <div class="header-content">
                     {{-- Muestra el titulo de la ruta si es difernte a la home --}}
-                    @if (request() -> routeIs('home'))
+                    <div class="wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        @if (request() -> routeIs('home'))
                         <h1>{{ __('header.title') }}</h1>
                     @else
                         <h1>{{str_replace("-", " ", Route::currentRouteName())}}</h1>
                     @endif
-                   <p>{{ __('header.description') }}</p>
+                    </div>
+                   <p class="wow fadeInUpBig" data-wow-duration="1.5s" data-wow-delay="0.8s">{{ __('header.description') }}</p>
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->

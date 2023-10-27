@@ -18,5 +18,5 @@ return [
     'contact-with-us' => 'Contact with Us',
     'rights' => 'All Rights reserved',
 
-    'on-construction' => '...on construction'
+    'under-construction' => 'Page is Under Construction'
 ];

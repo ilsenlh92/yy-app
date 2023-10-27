@@ -1,4 +1,7 @@
-
+{{--
+    Esta pagina funciona lo mismo para trailers que para foodtrucks para los cuales tiene la misma estructura, 
+    los elementos se cargan segun la ruta desde la que se llama
+--}}
 @extends('template/layout')
     @section('navbar')
         @parent
@@ -10,10 +13,7 @@
         <!--====== INFO PART START ======-->
         @include('includes.foodtrucks-trailers.description')
         <!--====== INFO PART ENDS ======-->
-         <!--====== FOODTRUCKS GALERY PART START ======-->
+         <!--====== FOODTRUCKS or TRAILERS GALERY PART START ======-->
         @include('includes.full-galery')
-        <!--====== FOODTRUCKS GALERY PART ENDS ======-->
-        <!--====== CAROUSEL GALERY PART START ======-->
-        @include('includes.foodtrucks-trailers.carousel')
-        <!--====== CAROUSEL GALERY PART ENDS ======-->
+        <!--====== FOODTRUCKS or TRAILERS GALERY PART ENDS ======-->
     @endsection

@@ -18,10 +18,10 @@ use App\Http\Controllers\Controller;
 Route::get('/', function () {
     return view('pages.home');
 })->name('home');
-Route::view('/trailers','pages.trailers')->name('trailers');
-Route::view('/foodtrucks','pages.foodtrucks')->name('foodtrucks');
+Route::view('/trailers','pages.foodtrucks-trailers')->name('trailers');
+Route::view('/foodtrucks','pages.foodtrucks-trailers')->name('foodtrucks');
 Route::get('/about-us', [Controller::class, 'show'])->name('about-us');
-Route::view('/construction','pages.on-construction')->name('on-construction');
+Route::view('/construction','pages.under-construction')->name('under-construction');
 
 //ruta ofrecida por APP para la Internacionalizacion
 Route::get('/greeting/{locale}', function (string $locale) {
