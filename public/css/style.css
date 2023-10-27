@@ -1193,7 +1193,7 @@ background-color: #212529;
 }
 @media (max-width: 767px) {
     .elements-area .col-12 {
-      margin: 1rem; } }
+      margin-bottom: 1rem; } }
 /*===========================
       03.CARDS css
 ===========================*/
