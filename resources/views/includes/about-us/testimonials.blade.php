@@ -19,7 +19,6 @@
     </style>
 @endsection
 
-
 <section id="testimonials" class="pt-70 pb-70">
     <div class="container">
         <div class="row justify-content-center">

@@ -4,6 +4,9 @@
         h2{
             text-align: center;
         }
+        .progress{
+            justify-content: center;
+        }
     </style>
 @endsection
 
@@ -28,7 +31,7 @@
 
 @section('scripts')
     @parent
-    <script type="text/javascript">
+    Failed to generate a response due to server error.    <script type="text/javascript">
         const progress = document.querySelector('.progress')
         const percentage = document.querySelector('.progress span')
     
@@ -36,14 +39,14 @@
         function progressLoad(){
             if(per>=80){
                 progress.style.width = `80%`;
-                percentage.innerHTML = "80%"
-    
+                percentage.innerHTML = "80%"    
             }else{
                 progress.style.width = `${per}%`;
                 percentage.innerHTML = `${per}%`;
+
             }
             per++
-    
+            progress.style.backgroundColor = `#ff9946`
         }
     
         setInterval(progressLoad,70)
