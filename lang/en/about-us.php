@@ -11,8 +11,8 @@ return [
 
     'title-1' => 'CUTTING-EDGE GASTRONOMIC',
     'title-2' => 'SOLUTIONS',
-    'description' => 'Consumers are becoming increasingly demanding and seeking unique gourmet experiences at reasonable prices. That’s why mobile food is making a difference in the United States, to the extent that it has experienced incredible growth over the last 7 years.
-     At S4L, we want to help make your dream of owning a food truck or trailer a reality. We take care of designing and customizing your project. We offer a wide variety of options to equip it with everything you need and set it in motion.',
+    'description' => 'Consumers are becoming increasingly demanding and seeking unique gourmet experiences at reasonable prices. That’s why mobile food is making a difference in the United States, to the extent that it has experienced incredible growth over the last years.
+     At Window Service Corp, we want to help make your dream of owning a food truck or trailer a reality. We take care of designing and customizing your project. We offer a wide variety of options to equip it with everything you need and set it in motion.',
     
     'title-3' => 'CUSTOM BUILT TRUCKS & TRAILERS',
     'p-1' => 'We offer all kinds of welding, from stainless steel to aluminum and iron. 

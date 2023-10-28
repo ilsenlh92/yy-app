@@ -3,7 +3,7 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-12 col-md-6 col-lg-5 p-4">
                 <div class="card bg-dark text-white card-img-container">
-                    <img class="card-img card-img-transition" src="{{ asset('images/cards/card1.webp') }}" alt="Card image" data-images="images/cards/card1.webp,images/cards/card2.webp,images/cards/card3.webp">
+                    <img class="card-img card-img-transition" src="{{ asset('images/cards/card1.webp') }}" alt="Window Service Corp foodtrucks" data-images="images/cards/card1.webp,images/cards/card2.webp,images/cards/card3.webp">
                     <div class="card-img-overlay">
                       <h1 class="card-title"><span style="color: white">{{ __('cards.card-1-title-1') }}</span> <br> {{ __('cards.card-1-title-2') }}</h1>
                       <p class="card-text">{{ __('cards.card-1-text') }}</p>
@@ -13,7 +13,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-5 p-4">
                 <div class="card bg-dark text-white card-img-container">
-                    <img class="card-img card-img-transition" src="images/cards/card4.webp" alt="Card image" data-images="images/cards/card4.webp,images/cards/card5.webp,images/cards/card6.webp">
+                    <img class="card-img card-img-transition" src="images/cards/card4.webp" alt="Window Service Corp trailers" data-images="images/cards/card4.webp,images/cards/card5.webp,images/cards/card6.webp">
                     <div class="card-img-overlay">
                       <h1 class="card-title"><span style="color: white">{{ __('cards.card-2-title-1') }}</span> <br> {{ __('cards.card-2-title-2') }}</h1>
                       <p class="card-text">{{ __('cards.card-1-text') }}</p>

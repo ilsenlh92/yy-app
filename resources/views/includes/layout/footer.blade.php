@@ -68,7 +68,7 @@
                                 {{ __('footer.element-1')}}
                                 <a rel="nofollow" href="https://uideck.com">UIdeck</a>
                                 {{ __('footer.element-2')}}
-                                <a rel="nofollow" href="https://www.google.com">VIQ</a>
+                                <a rel="nofollow" href="https://www.viqsystems.com">VIQ System</a>
                             </p>
                         </div> <!-- copyright text -->
                     </div> <!-- copyright -->

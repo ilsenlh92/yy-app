@@ -19,7 +19,7 @@
     <div class="container pt-120">
         <div class="row justify-content-center mb-120">
             <div class="col-12 col-lg-6 widget-wrap populated">        
-                <img src="{{asset('images/OIG.webp')}}" alt="on construction">
+                <img src="{{asset('images/OIG.webp')}}" alt="Window Service Corp under construction">
                 <h2>{{__('layout.under-construction')}}</h2>
                 <div class="progress-wrapper mt-10">
                     <div class="progress"><span>0%</span></div>
