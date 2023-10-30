@@ -42,7 +42,7 @@ a{
 
 img {
   max-width: 138%;
-  height: -webkit-fill-available;
+  /* height: -webkit-fill-available; */
   width: inherit;
   }
 
