@@ -83,25 +83,7 @@
 
             <!--====== Main js ======-->
             <script src="js/main.js"></script>
-            <script>
-                $(document).ready(function(){
-                    // Get the snackbar DIV
-                    var x = document.getElementById("snackbar");
-                    // Add the "show" class to DIV
-                    x.className = "show";
-                    // After 3 seconds, remove the show class from DIV
-                    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
-                });
-                window.addEventListener('DOMContentLoaded', (event) => {
-                    document.getElementById('wa').addEventListener('mouseover', function() {
-                        document.getElementById('wanum').style.display = 'inline';
-                    });
-
-                    document.getElementById('wa').addEventListener('mouseout', function() {
-                        document.getElementById('wanum').style.display = 'none';
-                    });
-                });
-            </script>
+          
             <!--====== Swiper js ======-->
             <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
             <script>
