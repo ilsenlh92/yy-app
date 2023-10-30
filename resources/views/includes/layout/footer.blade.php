@@ -11,6 +11,7 @@
                         <ul class="social">
                             <li><a href="#"><i class="lni lni-facebook"></i></a></li>
                             <li><a href="#"><i class="lni lni-instagram"></i></a></li>
+                            <li><a href="#"><img class="tiktok" src="{{asset('images/tiktok-alt.svg')}}" alt="tiktok"></a></li>
                         </ul>
                     </div> <!-- footer about -->
                 </div>
@@ -34,7 +35,7 @@
                             <li>
                                 <div class="contact-info d-flex">
                                     <div class="info-content media-body">
-                                        <p class="text"><a href="http://windowsservicecorp.us"><i class="lni lni-world"></i> windowsservicecorp.us</a></p>
+                                        <p class="text"><a href="http://yy-foodtruck.com"><i class="lni lni-world"></i> yy-foodtruck.com</a></p>
                                     </div>
                                 </div> <!-- contact info -->
                             </li>

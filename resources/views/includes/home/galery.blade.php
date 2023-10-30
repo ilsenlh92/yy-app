@@ -25,7 +25,7 @@
                     <div class="col-sm-6 col-md-4 filter ft">
                         <a class="lightbox wow fadeInUpBig" data-wow-duration="{{$duration}}s" data-wow-delay="{{$delay}}s" href="{{asset('images/galery/foodtrucks/'.$i.'.webp')}}">
                             <img class="img-responsive" src="{{asset('images/galery/foodtrucks/'.$i.'.webp')}}" alt="foodtrucks">
-                            <div class="overlay" style="background:linear-gradient(350deg, black, transparent);"></div>
+                            <div class="overlay"></div>
                         </a>
                     </div>
                     @php
@@ -41,7 +41,7 @@
                     <div class="col-sm-6 col-md-4 filter tr">
                         <a class="lightbox wow fadeInUpBig" data-wow-duration="{{$duration}}s" data-wow-delay="{{$delay}}s" href="{{asset('images/galery/trailers/'.$i.'.webp')}}">
                             <img class="img-responsive" src="{{asset('images/galery/trailers/'.$i.'.webp')}}">
-                            <div class="overlay" style="background:linear-gradient(350deg, black, transparent);"></div>
+                            <div class="overlay"></div>
                         </a>
                     </div>
                     @php

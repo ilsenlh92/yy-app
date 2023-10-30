@@ -1486,6 +1486,14 @@ background-color: #212529;
     }
 }
 
+#galery .overlay, #ft-galery .overlay{
+  background:linear-gradient(350deg, rgba(0, 0, 0, 0.5), transparent);
+}
+
+#galery .filter-button{
+  margin: 3px;
+}
+
 /*===========================
      6.CONTACT css
 ===========================*/

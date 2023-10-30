@@ -18,7 +18,7 @@
                             src="{{ asset('images/galery/' . Route::currentRouteName() . '/' . $i . '.webp') }}" 
                             alt="{{ Route::currentRouteName() }}"
                         >
-                        <div class="overlay" style="background:linear-gradient(350deg, black, transparent);"></div>
+                        <div class="overlay"></div>
                     </a>
                 </div>
                 @endfor
