@@ -84,6 +84,17 @@
             <!--====== Main js ======-->
             <script src="js/main.js"></script>
           
+            <script>
+                window.addEventListener('DOMContentLoaded', (event) => {
+                    document.getElementById('wa').addEventListener('mouseover', function() {
+                        document.getElementById('wanum').style.display = 'inline';
+                    });
+
+                    document.getElementById('wa').addEventListener('mouseout', function() {
+                        document.getElementById('wanum').style.display = 'none';
+                    });
+                });
+            </script>
             <!--====== Swiper js ======-->
             <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
             <script>
