@@ -11,7 +11,7 @@
                         <ul class="social">
                             <li><a href="#"><i class="lni lni-facebook"></i></a></li>
                             <li><a href="#"><i class="lni lni-instagram"></i></a></li>
-                            <li><a href="#"><img class="tiktok" src="{{asset('images/tiktok-alt.svg')}}" alt="tiktok"></a></li>
+                            <li><a href="#"><i class="lni lni-tiktok-alt"></i></a></li>
                         </ul>
                     </div> <!-- footer about -->
                 </div>
@@ -58,7 +58,7 @@
                 <div class="col-lg-12">
                     <div class="copyright justify-content-between pb-20 pt-20">
                         <div class="copyright-text text-center">
-                            <p class="text">©2023, 
+                            <p class="text">©{{date("Y")}}, 
                                 <a href="{{ route ('home')}}">
                                     Y&Y Window Services Corp.
                                 </a>

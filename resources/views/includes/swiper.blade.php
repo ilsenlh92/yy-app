@@ -10,12 +10,12 @@
             @for ($i = 1; $i < 3; $i++)
                 <div class="swiper-slide">
                     <img src="{{ asset('images/swiper'.$i.'.webp') }}" alt="Window Service Corp trailers">
-                    <div class="overlay">
+                    
                         <div class="carda">
                             <h2>{{ __('swiper.swiper-e-'.$i)}}</h2>
                             <p>{{ __('swiper.swiper-t-'.$i)}}</p>
                         </div>
-                    </div>
+                    
                 </div>
             @endfor
         </div>
